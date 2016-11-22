@@ -20,9 +20,10 @@
 
 #import "FruitypediaViewController.h"
 #import <CoreData/CoreData.h>
-#import <ChainableDataSource/ChainableDataSource.h>
+@import ChainableDataSource;
 #import "FruitCellDataSource.h"
 #import "AppDelegate.h"
+
 
 @interface FruitypediaViewController()  <UISearchBarDelegate>
 
@@ -64,9 +65,11 @@
     self.filterDeltaUpdate = dds;
     self.filterDeltaUpdate.deltaUpdateDisabled = !self.animationsSwitch.isOn;
 
+    CDSNoOp* noOp = [CDSNoOp transformFromDataSource:dds];
+    
     //Map fruits to cells
     CDSCellDataSource* fetchCds = [FruitCellDataSource new];
-    fetchCds.dataSource = dds;
+    fetchCds.dataSource = noOp;
 
     //Banner cell data source
     CDSCellDataSource* bannerCds = [CDSCellDataSource new];

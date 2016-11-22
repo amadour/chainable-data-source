@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017149461DE4E26A00620654 /* CDSNoOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017149451DE4E26A00620654 /* CDSNoOp.swift */; };
 		8C005F2C1D93C5B300458817 /* FruitCellDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005F2B1D93C5B300458817 /* FruitCellDataSource.m */; };
 		8C005F2F1D93C9A700458817 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C005F2E1D93C9A700458817 /* SafariServices.framework */; };
 		8C005F321D93CE6A00458817 /* ArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005F311D93CE6A00458817 /* ArrayViewController.m */; };
@@ -132,6 +133,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		017149451DE4E26A00620654 /* CDSNoOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSNoOp.swift; sourceTree = "<group>"; };
 		8C005F2A1D93C5B300458817 /* FruitCellDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitCellDataSource.h; sourceTree = "<group>"; };
 		8C005F2B1D93C5B300458817 /* FruitCellDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitCellDataSource.m; sourceTree = "<group>"; };
 		8C005F2E1D93C9A700458817 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -497,6 +499,7 @@
 				8CD89A361D71DC1B00915F40 /* CDSEmptySectionFilter.m */,
 				8CD89A331D71DC1B00915F40 /* CDSManualFilter.h */,
 				8CD89A341D71DC1B00915F40 /* CDSManualFilter.m */,
+				017149451DE4E26A00620654 /* CDSNoOp.swift */,
 			);
 			name = Transforms;
 			sourceTree = "<group>";
@@ -611,16 +614,19 @@
 					8CD899F51D71DAB900915F40 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5P72E3GC48;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					8CD899FE1D71DAB900915F40 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5P72E3GC48;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					8CD89A131D71DB5700915F40 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5P72E3GC48;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -713,6 +719,7 @@
 				8CD89A7A1D73185500915F40 /* CDSDataSourceHelpers.m in Sources */,
 				8C12F9CA1D919184003F2DCC /* UICollectionView+CDSCellOperator.m in Sources */,
 				8CD89A571D71DC1B00915F40 /* CDSManualFilter.m in Sources */,
+				017149461DE4E26A00620654 /* CDSNoOp.swift in Sources */,
 				8CD89A7E1D73189D00915F40 /* CDSCountCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -969,6 +976,7 @@
 		8CD89A0B1D71DAB900915F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5P72E3GC48;
@@ -981,12 +989,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashlane.ChainableDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8CD89A0C1D71DAB900915F40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5P72E3GC48;
@@ -999,52 +1011,72 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashlane.ChainableDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		8CD89A0E1D71DAB900915F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P72E3GC48;
 				INFOPLIST_FILE = ChainableDataSourceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashlane.ChainableDataSourceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8CD89A0F1D71DAB900915F40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P72E3GC48;
 				INFOPLIST_FILE = ChainableDataSourceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashlane.ChainableDataSourceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		8CD89A291D71DB5700915F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P72E3GC48;
 				INFOPLIST_FILE = ChainableDataSourceShowcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashlane.ChainableDataSourceShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8CD89A2A1D71DB5700915F40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P72E3GC48;
 				INFOPLIST_FILE = ChainableDataSourceShowcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashlane.ChainableDataSourceShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
